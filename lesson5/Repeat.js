@@ -1,0 +1,1 @@
+console.log("JavaScript".repeat(3));
