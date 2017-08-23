@@ -41,3 +41,14 @@ console.log("ก".length);
 var char = "𤭢";
 console.log(char.length);
 
+console.log("===========================");
+var \u{e01} = 100;
+console.log(\u{e01});
+console.log("\u{e01}");
+
+var ข = "JavaScript";
+console.log(ข);
+
+var \u0e01 = 100;
+console.log(\u0e01);
+
