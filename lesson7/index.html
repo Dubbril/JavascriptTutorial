@@ -1,0 +1,36 @@
+<!-- ไฟล์ชื่อ index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+	<script type="text/javascript" src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+	<script type="text/javascript" src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+</head>
+<body>
+	<!-- แสดงปุ่มคำว่า "Try it" ออกมาทางหน้าเว็บเบลาเซอร์ -->
+	<!-- เมื่อกดปุ่มจะเกิด error -->
+	<button type="button" id="b1">Try it</button>
+	
+	<script type="module">
+	let obj = {
+		value : "JavaScript",
+		printValue : function(){
+			console.log("Message:",this.value); // this จะชี้ไปยังออบเจ็กต์ obj
+	},
+	handle : function(){
+		console.log("Press a button");
+	},
+	init : function(){
+		let element = document.querySelector("#b1"); // ปุ่ม "Try it"
+		element.addEventListener("click",(event)=> this.handle()); //this ชี้ไปยัง obj
+		/* element.addEventListener("click",function(event){
+			this.handle(); // this จะชี้ไปยังออบเจ็กต์ element
+		// },false);
+		}.bind(this)); */
+	}
+	}; // สิ้นสุดออบเจ็กต์ obj
+	obj.printValue(); // บรรทัด b -- แสดงคำว่า "Message: JavaScript" ออกมาทางหน้าคอนโซล
+	obj.init();
+	</script>
+</body>
+</html>
