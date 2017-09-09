@@ -14,7 +14,7 @@ let trapLogic = {
 				throw `Can't read property: ${key}`;
 			}
 		},
-		deletProperty(targetObj,key){ // ลบพร็อพเพอร์ตี
+		deleteProperty(targetObj,key){ // ลบพร็อพเพอร์ตี
 			if(Reflect.has(targetObj,key)){
 				return Reflect.deleteProperty(targetObj,key);
 			}else{
