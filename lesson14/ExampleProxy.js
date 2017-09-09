@@ -4,7 +4,7 @@ let trapLogic = {
 			if(Reflect.has(targetObj,key)){
 				return Reflect.set(targetObj,key,value);
 			}else{
-				throw `Cat't write property : ${key}`;
+				throw `Can't write property : ${key}`;
 			}
 		},
 		get(targetObj,key,proxy){ // อ่านเพร็อพเพอร์ดี
