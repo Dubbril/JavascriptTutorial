@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+	<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+</head>
+<body>
+<ul>
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+</ul>
+<script type="module">
+	let element = document.getElementByTagName("li");
+	for(let e of element){
+		console.log(e.innerHTML);
+	}
+</script>
+</body>
+</html>
