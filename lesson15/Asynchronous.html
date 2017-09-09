@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Asynchronous</title>
+</head>
+<body>
+	<button id="button1">Simple button</button><br/>
+	<h1 id="head1"></h1>
+	<h1 id="head2"></h1>
+	<script>
+	var button = document.querySelector("#button1");
+	var head1 = document.querySelector("#head1");
+	var head2 = document.querySelector("#head2");
+	var count = 1;
+	
+	button.onclick = function(event){
+		head1.innerHTML = "Count : "+count++;
+	};
+	
+	head2.innerHTML = "Asynchronous programming";
+	
+	</script>
+</body>
+</html>
